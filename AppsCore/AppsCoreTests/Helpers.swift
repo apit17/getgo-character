@@ -19,11 +19,19 @@ class CharacterApiSuccessSpy: CharacterApiProtocol {
             completion(nil, ApiError())
         }
     }
+
+    func fetchCharacter(id: Int, completion: @escaping (Character?, Error?) -> Void) {
+
+    }
 }
 
 class CharacterApiErrorSpy: CharacterApiProtocol {
     func fetchCharacters(filter: FilterCharacter, completion: (CharacterData?, Error?) -> Void) {
         completion(nil, ApiError())
+    }
+
+    func fetchCharacter(id: Int, completion: @escaping (Character?, Error?) -> Void) {
+
     }
 }
 

@@ -9,6 +9,7 @@ import Foundation
 
 public protocol CharacterApiProtocol {
     func fetchCharacters(filter: FilterCharacter, completion: @escaping (CharacterData?, Error?) -> Void)
+    func fetchCharacter(id: Int, completion: @escaping (Character?, Error?) -> Void)
 }
 
 public class CharacterApi: CharacterApiProtocol {
@@ -37,4 +38,9 @@ public class CharacterApi: CharacterApiProtocol {
             }
         }
     }
+
+    public func fetchCharacter(id: Int, completion: @escaping (Character?, Error?) -> Void) {
+
+    }
+
 }

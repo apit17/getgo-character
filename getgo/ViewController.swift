@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         let api = CharacterApi(network: NetworkManager())
         let filter = FilterCharacter(page: 1)
         api.fetchCharacters(filter: filter) { data, error in
-//            print(data)
+            print(data?.results.first?.name)
 //            print(error?.localizedDescription)
         }
     }

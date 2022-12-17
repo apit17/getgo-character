@@ -10,11 +10,11 @@ import Foundation
 public enum CharacterRoutes {
 
     case getCharacters(filter: FilterCharacter)
-    case getCharacterDetail(id: Int)
+    case getCharacter(id: Int)
 
     public var path: String {
         switch self {
-        case .getCharacterDetail(let id):
+        case .getCharacter(let id):
             return String(format: "character/%i", id)
         default: return ""
         }

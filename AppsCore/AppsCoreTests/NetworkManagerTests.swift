@@ -33,7 +33,7 @@ final class NetworkManagerTests: XCTestCase {
     func test_allCharacterPath() {
         let filter = FilterCharacter(page: 1, name: "rick", status: .alive, species: .human, gender: .male)
         let characterListPath = CharacterRoutes.getCharacters(filter: filter).url
-        let characterDetailPath = CharacterRoutes.getCharacterDetail(id: 1).path
+        let characterDetailPath = CharacterRoutes.getCharacter(id: 1).path
 
         XCTAssertEqual(characterListPath, URL(string: "https://rickandmortyapi.com/api/character?page=1&name=rick&status=alive&species=human&gender=male"))
         XCTAssertEqual(characterDetailPath, "character/1")

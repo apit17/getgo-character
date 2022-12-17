@@ -12,4 +12,18 @@ public struct Character: Codable {
     public let name: String
     public let species: String
     public let image: String
+    public let gender: String
+    public let status: String
+    public let created: String
+    public let origin: Origin
+    public let location: Location
+    public let episode: [String]
+}
+
+public struct Origin: Codable {
+    public let name: String
+}
+
+public struct Location: Codable {
+    public let name: String
 }
