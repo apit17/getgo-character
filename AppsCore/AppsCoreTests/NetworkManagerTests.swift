@@ -31,7 +31,8 @@ final class NetworkManagerTests: XCTestCase {
     }
 
     func test_allCharacterPath() {
-        let characterListPath = CharacterRoutes.getCharacters(page: 1, name: "rick", status: "alive", species: "human", gender: "male").path
+        let filter = FilterCharacter(page: 1, name: "rick", status: .alive, species: .human, gender: .male)
+        let characterListPath = CharacterRoutes.getCharacters(filter: filter).path
         let characterDetailPath = CharacterRoutes.getCharacterDetail(id: 1).path
 
         XCTAssertEqual(characterListPath, "character?page=1&name=rick&status=alive&species=human&gender=male")

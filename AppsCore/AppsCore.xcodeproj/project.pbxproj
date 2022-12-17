@@ -14,6 +14,7 @@
 		717A7EBD294DD1BC003E42B7 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */; };
 		717A7EC1294DD348003E42B7 /* CharacterRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EC0294DD348003E42B7 /* CharacterRoutes.swift */; };
 		717A7EC7294E05F9003E42B7 /* CharacterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EC6294E05F9003E42B7 /* CharacterApi.swift */; };
+		717A7ECA294E1B60003E42B7 /* FilterCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EC9294E1B60003E42B7 /* FilterCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		717A7EC0294DD348003E42B7 /* CharacterRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRoutes.swift; sourceTree = "<group>"; };
 		717A7EC6294E05F9003E42B7 /* CharacterApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApi.swift; sourceTree = "<group>"; };
+		717A7EC9294E1B60003E42B7 /* FilterCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		717A7EA0294DCF1B003E42B7 /* AppsCore */ = {
 			isa = PBXGroup;
 			children = (
+				717A7EC8294E1B4A003E42B7 /* Models */,
 				717A7EA1294DCF1B003E42B7 /* AppsCore.h */,
 				717A7EB6294DCF34003E42B7 /* NetworManager.swift */,
 				717A7EBA294DCF80003E42B7 /* AppsCore.swift */,
@@ -92,6 +95,14 @@
 				717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */,
 			);
 			path = AppsCoreTests;
+			sourceTree = "<group>";
+		};
+		717A7EC8294E1B4A003E42B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				717A7EC9294E1B60003E42B7 /* FilterCharacter.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717A7ECA294E1B60003E42B7 /* FilterCharacter.swift in Sources */,
 				717A7EC7294E05F9003E42B7 /* CharacterApi.swift in Sources */,
 				717A7EBB294DCF80003E42B7 /* AppsCore.swift in Sources */,
 				717A7EC1294DD348003E42B7 /* CharacterRoutes.swift in Sources */,
