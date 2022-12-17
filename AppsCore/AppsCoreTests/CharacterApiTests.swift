@@ -17,6 +17,7 @@ final class CharacterApiTests: XCTestCase {
             XCTAssertNil(error, "Error should be nil")
             XCTAssertNotNil(result?.info)
             XCTAssertNotNil(result?.results)
+            XCTAssertEqual(result?.results.first?.name, "Rick Sanchez")
         }
     }
 
@@ -28,27 +29,4 @@ final class CharacterApiTests: XCTestCase {
             XCTAssertNil(result)
         }
     }
-}
-
-class CharacterApiSuccessSpy: CharacterApiProtocol {
-    func fetchCharacters(filter: FilterCharacter, completion: (CharacterData?, Error?) -> Void) {
-        let characterData = CharacterData(info: PageInfo(count: 100,
-                                                         pages: 1,
-                                                         nextUrl: "url"),
-                                          results: [
-                                            Character(id: 1,
-                                                      name: "Rick",
-                                                      species: "Human",
-                                                      image: "image")])
-        completion(characterData, nil)
-    }
-}
-
-class CharacterApiErrorSpy: CharacterApiProtocol {
-    func fetchCharacters(filter: FilterCharacter, completion: (CharacterData?, Error?) -> Void) {
-        completion(nil, ApiError())
-    }
-}
-
-struct ApiError: Error {
 }

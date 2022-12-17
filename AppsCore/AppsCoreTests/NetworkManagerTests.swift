@@ -11,7 +11,7 @@ import XCTest
 final class NetworkManagerTests: XCTestCase {
 
     func test_loadData_whenItCall_itShouldReturnResult() {
-        let manager = AppsCore.Networking.Manager()
+        let manager = NetworkManager()
         let session = NetworkingSessionMock()
         manager.session = session
         let expectation = XCTestExpectation(description: "Called for data")

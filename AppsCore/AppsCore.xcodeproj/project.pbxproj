@@ -10,7 +10,6 @@
 		717A7EA7294DCF1B003E42B7 /* AppsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717A7E9E294DCF1B003E42B7 /* AppsCore.framework */; };
 		717A7EAD294DCF1B003E42B7 /* AppsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 717A7EA1294DCF1B003E42B7 /* AppsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		717A7EB7294DCF34003E42B7 /* NetworManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EB6294DCF34003E42B7 /* NetworManager.swift */; };
-		717A7EBB294DCF80003E42B7 /* AppsCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EBA294DCF80003E42B7 /* AppsCore.swift */; };
 		717A7EBD294DD1BC003E42B7 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */; };
 		717A7EC1294DD348003E42B7 /* CharacterRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EC0294DD348003E42B7 /* CharacterRoutes.swift */; };
 		717A7EC7294E05F9003E42B7 /* CharacterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EC6294E05F9003E42B7 /* CharacterApi.swift */; };
@@ -19,6 +18,7 @@
 		717A7ECE294E2248003E42B7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7ECD294E2248003E42B7 /* Character.swift */; };
 		717A7ED0294E23DF003E42B7 /* CharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7ECF294E23DF003E42B7 /* CharacterData.swift */; };
 		717A7ED2294E24FB003E42B7 /* CharacterApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7ED1294E24FB003E42B7 /* CharacterApiTests.swift */; };
+		717A7ED4294E2FCD003E42B7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7ED3294E2FCD003E42B7 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 		717A7EA1294DCF1B003E42B7 /* AppsCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppsCore.h; sourceTree = "<group>"; };
 		717A7EA6294DCF1B003E42B7 /* AppsCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		717A7EB6294DCF34003E42B7 /* NetworManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworManager.swift; sourceTree = "<group>"; };
-		717A7EBA294DCF80003E42B7 /* AppsCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCore.swift; sourceTree = "<group>"; };
 		717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		717A7EC0294DD348003E42B7 /* CharacterRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRoutes.swift; sourceTree = "<group>"; };
 		717A7EC6294E05F9003E42B7 /* CharacterApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApi.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		717A7ECD294E2248003E42B7 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		717A7ECF294E23DF003E42B7 /* CharacterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterData.swift; sourceTree = "<group>"; };
 		717A7ED1294E24FB003E42B7 /* CharacterApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApiTests.swift; sourceTree = "<group>"; };
+		717A7ED3294E2FCD003E42B7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,6 @@
 				717A7EC8294E1B4A003E42B7 /* Models */,
 				717A7EA1294DCF1B003E42B7 /* AppsCore.h */,
 				717A7EB6294DCF34003E42B7 /* NetworManager.swift */,
-				717A7EBA294DCF80003E42B7 /* AppsCore.swift */,
 				717A7EC0294DD348003E42B7 /* CharacterRoutes.swift */,
 				717A7EC6294E05F9003E42B7 /* CharacterApi.swift */,
 			);
@@ -102,6 +101,7 @@
 			children = (
 				717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */,
 				717A7ED1294E24FB003E42B7 /* CharacterApiTests.swift */,
+				717A7ED3294E2FCD003E42B7 /* Helpers.swift */,
 			);
 			path = AppsCoreTests;
 			sourceTree = "<group>";
@@ -232,7 +232,6 @@
 				717A7EC7294E05F9003E42B7 /* CharacterApi.swift in Sources */,
 				717A7ECE294E2248003E42B7 /* Character.swift in Sources */,
 				717A7ECC294E219C003E42B7 /* PageInfo.swift in Sources */,
-				717A7EBB294DCF80003E42B7 /* AppsCore.swift in Sources */,
 				717A7ED0294E23DF003E42B7 /* CharacterData.swift in Sources */,
 				717A7EC1294DD348003E42B7 /* CharacterRoutes.swift in Sources */,
 				717A7EB7294DCF34003E42B7 /* NetworManager.swift in Sources */,
@@ -244,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				717A7ED2294E24FB003E42B7 /* CharacterApiTests.swift in Sources */,
+				717A7ED4294E2FCD003E42B7 /* Helpers.swift in Sources */,
 				717A7EBD294DD1BC003E42B7 /* NetworkManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
