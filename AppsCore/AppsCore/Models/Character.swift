@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Character: Codable {
-    let id: Int
-    let name: String
-    let species: String
-    let image: String
+public struct Character: Codable {
+    public let id: Int
+    public let name: String
+    public let species: String
+    public let image: String
 }

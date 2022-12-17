@@ -12,16 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let manager = AppsCore.Networking.Manager()
-        let url = CharacterRoutes.getCharacters(page: 1).url
-
-        manager.loadData(from: url) { result in
-            switch result {
-            case .success(let data):
-                print(data)
-            case .failure(let error):
-                print(error)
-            }
+        let api = CharacterApi(network: NetworkManager())
+        let filter = FilterCharacter(page: 1)
+        api.fetchCharacters(filter: filter) { data, error in
+//            print(data)
+//            print(error?.localizedDescription)
         }
     }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CharacterData: Codable {
-    let info: PageInfo
-    let results: [Character]
+public struct CharacterData: Codable {
+    public let info: PageInfo
+    public let results: [Character]
 }

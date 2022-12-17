@@ -7,19 +7,19 @@
 
 import Foundation
 
-protocol CharacterApiProtocol {
+public protocol CharacterApiProtocol {
     func fetchCharacters(filter: FilterCharacter, completion: @escaping (CharacterData?, Error?) -> Void)
 }
 
-class CharacterApi: CharacterApiProtocol {
+public class CharacterApi: CharacterApiProtocol {
 
     private let network: NetworkManager
 
-    init(network: NetworkManager) {
+    public init(network: NetworkManager) {
         self.network = network
     }
 
-    func fetchCharacters(filter: FilterCharacter, completion: @escaping (CharacterData?, Error?) -> Void) {
+    public func fetchCharacters(filter: FilterCharacter, completion: @escaping (CharacterData?, Error?) -> Void) {
         let url = CharacterRoutes.getCharacters(filter: filter).url
         network.loadData(from: url) { result in
             switch result {
@@ -30,6 +30,7 @@ class CharacterApi: CharacterApiProtocol {
                     completion(decoded, nil)
                 } catch {
                     print("Failed to decode JSON")
+                    completion(nil, error)
                 }
             case .failure(let error):
                 completion(nil, error)

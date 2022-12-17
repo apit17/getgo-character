@@ -13,6 +13,14 @@ public struct FilterCharacter {
     public var status: Status?
     public var species: Species?
     public var gender: Gender?
+
+    public init(page: Int, name: String? = nil, status: Status? = nil, species: Species? = nil, gender: Gender? = nil) {
+        self.page = page
+        self.name = name
+        self.status = status
+        self.species = species
+        self.gender = gender
+    }
 }
 
 public enum Status: String {

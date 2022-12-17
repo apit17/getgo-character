@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppsCore
 
 class CharacterApiSuccessSpy: CharacterApiProtocol {
     func fetchCharacters(filter: FilterCharacter, completion: (CharacterData?, Error?) -> Void) {

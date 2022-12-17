@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct PageInfo: Codable {
-    let count: Int
-    let pages: Int
-    let nextUrl: String
-    var prevUrl: String?
+public struct PageInfo: Codable {
+    public let count: Int
+    public let pages: Int
+    public let nextUrl: String
+    public var prevUrl: String?
 
     enum CodingKeys: String, CodingKey {
         case count, pages
