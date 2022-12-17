@@ -40,7 +40,22 @@ public class CharacterApi: CharacterApiProtocol {
     }
 
     public func fetchCharacter(id: Int, completion: @escaping (Character?, Error?) -> Void) {
-//        let url = CharacterRoutes.getCharacter(id: id).ur
+        let url = CharacterRoutes.getCharacter(id: id).url
+        network.loadData(from: url) { result in
+            switch result {
+            case .success(let value):
+                let decoder = JSONDecoder()
+                do {
+                    let decoded = try decoder.decode(Character.self, from: value)
+                    completion(decoded, nil)
+                } catch {
+                    print("Failed to decode JSON")
+                    completion(nil, error)
+                }
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
     }
 
 }

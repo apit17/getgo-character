@@ -19,6 +19,7 @@
 		717A7ED0294E23DF003E42B7 /* CharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7ECF294E23DF003E42B7 /* CharacterData.swift */; };
 		717A7ED2294E24FB003E42B7 /* CharacterApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7ED1294E24FB003E42B7 /* CharacterApiTests.swift */; };
 		717A7ED4294E2FCD003E42B7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7ED3294E2FCD003E42B7 /* Helpers.swift */; };
+		717A7ED6294E46E6003E42B7 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7ED5294E46E6003E42B7 /* Responses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		717A7ECF294E23DF003E42B7 /* CharacterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterData.swift; sourceTree = "<group>"; };
 		717A7ED1294E24FB003E42B7 /* CharacterApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApiTests.swift; sourceTree = "<group>"; };
 		717A7ED3294E2FCD003E42B7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		717A7ED5294E46E6003E42B7 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */,
 				717A7ED1294E24FB003E42B7 /* CharacterApiTests.swift */,
 				717A7ED3294E2FCD003E42B7 /* Helpers.swift */,
+				717A7ED5294E46E6003E42B7 /* Responses.swift */,
 			);
 			path = AppsCoreTests;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717A7ED6294E46E6003E42B7 /* Responses.swift in Sources */,
 				717A7ED2294E24FB003E42B7 /* CharacterApiTests.swift in Sources */,
 				717A7ED4294E2FCD003E42B7 /* Helpers.swift in Sources */,
 				717A7EBD294DD1BC003E42B7 /* NetworkManagerTests.swift in Sources */,
