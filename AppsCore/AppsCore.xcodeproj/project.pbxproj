@@ -109,11 +109,11 @@
 		717A7EA0294DCF1B003E42B7 /* AppsCore */ = {
 			isa = PBXGroup;
 			children = (
-				717A7EC8294E1B4A003E42B7 /* Models */,
 				717A7EA1294DCF1B003E42B7 /* AppsCore.h */,
 				717A7EB6294DCF34003E42B7 /* NetworManager.swift */,
-				717A7EDC294E4965003E42B7 /* Routes */,
 				717A7ED7294E48E4003E42B7 /* APIs */,
+				717A7EC8294E1B4A003E42B7 /* Models */,
+				717A7EDC294E4965003E42B7 /* Routes */,
 			);
 			path = AppsCore;
 			sourceTree = "<group>";
@@ -121,12 +121,12 @@
 		717A7EAA294DCF1B003E42B7 /* AppsCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */,
 				717A7ED1294E24FB003E42B7 /* CharacterApiTests.swift */,
-				717A7ED3294E2FCD003E42B7 /* Helpers.swift */,
-				717A7ED5294E46E6003E42B7 /* Responses.swift */,
 				717A7EED294E4FE7003E42B7 /* EpisodeApiTests.swift */,
+				717A7ED3294E2FCD003E42B7 /* Helpers.swift */,
 				717A7EEF294E4FEF003E42B7 /* LocationApiTests.swift */,
+				717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */,
+				717A7ED5294E46E6003E42B7 /* Responses.swift */,
 			);
 			path = AppsCoreTests;
 			sourceTree = "<group>";
