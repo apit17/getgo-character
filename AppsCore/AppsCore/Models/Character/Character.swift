@@ -16,7 +16,7 @@ public struct Character: Codable {
     public let status: String
     public let created: String
     public let origin: Origin
-    public let location: Location
+    public let location: CharacterLocation
     public let episode: [String]
 }
 
@@ -24,6 +24,6 @@ public struct Origin: Codable {
     public let name: String
 }
 
-public struct Location: Codable {
+public struct CharacterLocation: Codable {
     public let name: String
 }
