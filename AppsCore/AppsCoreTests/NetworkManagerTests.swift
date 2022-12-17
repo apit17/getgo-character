@@ -39,6 +39,22 @@ final class NetworkManagerTests: XCTestCase {
         XCTAssertEqual(characterDetailPath, URL(string: "https://rickandmortyapi.com/api/character/1"))
     }
 
+    func test_allLocationPath() {
+        let locationListPath = LocationRoutes.getLocations(page: 1, name: "rick").url
+        let locationDetailPath = LocationRoutes.getLocation(id: 1).url
+
+        XCTAssertEqual(locationListPath, URL(string: "https://rickandmortyapi.com/api/location?page=1&name=rick"))
+        XCTAssertEqual(locationDetailPath, URL(string: "https://rickandmortyapi.com/api/location/1"))
+    }
+
+    func test_allEpisodePath() {
+        let episodeListPath = EpisodeRoutes.getEpisodes(page: 1, name: "rick").url
+        let episodeDetailPath = EpisodeRoutes.getEpisode(id: 1).url
+
+        XCTAssertEqual(episodeListPath, URL(string: "https://rickandmortyapi.com/api/episode?page=1&name=rick"))
+        XCTAssertEqual(episodeDetailPath, URL(string: "https://rickandmortyapi.com/api/episode/1"))
+    }
+
 }
 
 class NetworkingSessionMock: NetworkSession {
