@@ -40,7 +40,7 @@ public class CharacterApi: CharacterApiProtocol {
     }
 
     public func fetchCharacter(id: Int, completion: @escaping (Character?, Error?) -> Void) {
-
+//        let url = CharacterRoutes.getCharacter(id: id).ur
     }
 
 }

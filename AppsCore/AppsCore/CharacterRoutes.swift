@@ -13,15 +13,17 @@ public enum CharacterRoutes {
     case getCharacter(id: Int)
 
     public var path: String {
+        let basePath = "/api/character"
         switch self {
         case .getCharacter(let id):
-            return String(format: "character/%i", id)
-        default: return ""
+            return String(format: "%@/%i", basePath, id)
+        default:
+            return basePath
         }
     }
 
     public var url: URL {
-        var urlComponents = URLComponents(string: "https://rickandmortyapi.com/api/character")!
+        var urlComponents = URLComponents(string: "https://rickandmortyapi.com")!
         switch self {
         case .getCharacters(let filter):
             let name = filter.name ?? ""
@@ -35,7 +37,9 @@ public enum CharacterRoutes {
                 URLQueryItem(name: "species", value: species),
                 URLQueryItem(name: "gender", value: gender)
             ]
-        default: break
+            urlComponents.path = path
+        case .getCharacter:
+            urlComponents.path = path
         }
         return urlComponents.url!
     }
