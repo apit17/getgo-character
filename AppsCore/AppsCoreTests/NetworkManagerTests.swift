@@ -31,11 +31,11 @@ final class NetworkManagerTests: XCTestCase {
     }
 
     func test_allCharacterPath() {
-        let characterListPath = CharacterRoutes.getCharacters(page: 1).url.absoluteString
-        let characterDetailPath = CharacterRoutes.getCharacterDetail(id: 1).url.absoluteString
+        let characterListPath = CharacterRoutes.getCharacters(page: 1, name: "rick", status: "alive", species: "human", gender: "male").path
+        let characterDetailPath = CharacterRoutes.getCharacterDetail(id: 1).path
 
-        XCTAssertEqual(characterListPath.removingPercentEncoding, "https://rickandmortyapi.com/api/character?page=1")
-        XCTAssertEqual(characterDetailPath.removingPercentEncoding, "https://rickandmortyapi.com/api/character/1")
+        XCTAssertEqual(characterListPath, "character?page=1&name=rick&status=alive&species=human&gender=male")
+        XCTAssertEqual(characterDetailPath, "character/1")
     }
 
 }

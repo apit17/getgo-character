@@ -9,13 +9,13 @@ import Foundation
 
 public enum CharacterRoutes {
 
-    case getCharacters(page: Int)
+    case getCharacters(page: Int, name: String, status: String, species: String, gender: String)
     case getCharacterDetail(id: Int)
 
-    var path: String {
+    public var path: String {
         switch self {
-        case .getCharacters(let page):
-            return String(format: "character?page=%i", page)
+        case .getCharacters(let page, let name, let status, let species, let gender):
+            return String(format: "character?page=%i&name=%@&status=%@&species=%@&gender=%@", page, name, status, species, gender)
         case .getCharacterDetail(let id):
             return String(format: "character/%i", id)
         }

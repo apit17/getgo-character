@@ -13,6 +13,7 @@
 		717A7EBB294DCF80003E42B7 /* AppsCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EBA294DCF80003E42B7 /* AppsCore.swift */; };
 		717A7EBD294DD1BC003E42B7 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */; };
 		717A7EC1294DD348003E42B7 /* CharacterRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EC0294DD348003E42B7 /* CharacterRoutes.swift */; };
+		717A7EC7294E05F9003E42B7 /* CharacterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7EC6294E05F9003E42B7 /* CharacterApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		717A7EBA294DCF80003E42B7 /* AppsCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCore.swift; sourceTree = "<group>"; };
 		717A7EBC294DD1BC003E42B7 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		717A7EC0294DD348003E42B7 /* CharacterRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRoutes.swift; sourceTree = "<group>"; };
+		717A7EC6294E05F9003E42B7 /* CharacterApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				717A7EB6294DCF34003E42B7 /* NetworManager.swift */,
 				717A7EBA294DCF80003E42B7 /* AppsCore.swift */,
 				717A7EC0294DD348003E42B7 /* CharacterRoutes.swift */,
+				717A7EC6294E05F9003E42B7 /* CharacterApi.swift */,
 			);
 			path = AppsCore;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717A7EC7294E05F9003E42B7 /* CharacterApi.swift in Sources */,
 				717A7EBB294DCF80003E42B7 /* AppsCore.swift in Sources */,
 				717A7EC1294DD348003E42B7 /* CharacterRoutes.swift in Sources */,
 				717A7EB7294DCF34003E42B7 /* NetworManager.swift in Sources */,
