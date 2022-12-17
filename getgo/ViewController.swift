@@ -6,12 +6,23 @@
 //
 
 import UIKit
+import AppsCore
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let manager = AppsCore.Networking.Manager()
+        let url = CharacterRoutes.getCharacters(page: 1).url
+
+        manager.loadData(from: url) { result in
+            switch result {
+            case .success(let data):
+                print(data)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 
