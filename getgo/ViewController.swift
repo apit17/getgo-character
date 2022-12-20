@@ -12,11 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let api = CharacterApi(network: NetworkManager())
-        let filter = FilterCharacter(page: 1)
-        api.fetchCharacter(id: 1) { data, error in
-            print(data?.name)
-//            print(error?.localizedDescription)
+        let api = EpisodeApi(network: NetworkManager())
+        api.fetchEpisodes(page: 1, name: nil) { data, error in
+            print(data?.results.first?.name)
         }
     }
 

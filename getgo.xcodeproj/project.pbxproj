@@ -19,6 +19,8 @@
 		717A7DD4294DC32D003E42B7 /* getgoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7DD3294DC32D003E42B7 /* getgoUITestsLaunchTests.swift */; };
 		717A7EC3294DDC9A003E42B7 /* AppsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717A7EC2294DDC9A003E42B7 /* AppsCore.framework */; };
 		717A7EC4294DDC9A003E42B7 /* AppsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 717A7EC2294DDC9A003E42B7 /* AppsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		71F37E142950C13200988E03 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F37E132950C13200988E03 /* CharacterViewController.swift */; };
+		71F37E162950C15D00988E03 /* CharacterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F37E152950C15D00988E03 /* CharacterViewControllerTests.swift */; };
 		C84DD322F560841BAF6B4B9C /* Pods_getgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08CE4158C58B7F3CA34A197 /* Pods_getgo.framework */; };
 		F7D375185F49CF45AA4C713B /* Pods_getgoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E2F2B2E773702B938ACD78 /* Pods_getgoTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,8 @@
 		717A7DD1294DC32D003E42B7 /* getgoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getgoUITests.swift; sourceTree = "<group>"; };
 		717A7DD3294DC32D003E42B7 /* getgoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getgoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		717A7EC2294DDC9A003E42B7 /* AppsCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppsCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F37E132950C13200988E03 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		71F37E152950C15D00988E03 /* CharacterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewControllerTests.swift; sourceTree = "<group>"; };
 		8F3C662B85634B66B4A04360 /* Pods_getgoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_getgoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9113D282002EB6EFFC3E8250 /* Pods-getgo-getgoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-getgo-getgoUITests.release.xcconfig"; path = "Target Support Files/Pods-getgo-getgoUITests/Pods-getgo-getgoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9220A22DAFDF2C39E7D18098 /* Pods-getgoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-getgoUITests.debug.xcconfig"; path = "Target Support Files/Pods-getgoUITests/Pods-getgoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				717A7DB9294DC32C003E42B7 /* Assets.xcassets */,
 				717A7DBB294DC32C003E42B7 /* LaunchScreen.storyboard */,
 				717A7DBE294DC32C003E42B7 /* Info.plist */,
+				71F37E132950C13200988E03 /* CharacterViewController.swift */,
 			);
 			path = getgo;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				717A7DC7294DC32D003E42B7 /* getgoTests.swift */,
+				71F37E152950C15D00988E03 /* CharacterViewControllerTests.swift */,
 			);
 			path = getgoTests;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F37E142950C13200988E03 /* CharacterViewController.swift in Sources */,
 				717A7DB5294DC32B003E42B7 /* ViewController.swift in Sources */,
 				717A7DB1294DC32B003E42B7 /* AppDelegate.swift in Sources */,
 				717A7DB3294DC32B003E42B7 /* SceneDelegate.swift in Sources */,
@@ -422,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F37E162950C15D00988E03 /* CharacterViewControllerTests.swift in Sources */,
 				717A7DC8294DC32D003E42B7 /* getgoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
