@@ -11,6 +11,7 @@ import AppsCore
 protocol CharacterViewModelType {
 
     var viewDelegate: CharacterViewModelViewDelegate? { get set }
+    var title: String { get }
 
     func numberOfItems() -> Int
     func itemFor(row: Int) -> CharacterCollectionViewCellViewModel
@@ -40,6 +41,10 @@ class CharacterViewModel {
 }
 
 extension CharacterViewModel: CharacterViewModelType {
+
+    var title: String {
+        "character".capitalized
+    }
 
     func numberOfItems() -> Int {
         characters.count

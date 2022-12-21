@@ -20,13 +20,21 @@ class CharacterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionView()
+        setupNavigation()
+        viewModel.getCharacters()
+    }
+
+    private func setupNavigation() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.searchController = UISearchController(searchResultsController: nil)
-        title = "character".capitalized
+        title = viewModel.title
+    }
+
+    private func setupCollectionView() {
         collectionView.register(UINib(nibName: String(describing: CharacterCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: CharacterCollectionViewCell.self))
         collectionView.dataSource = self
         collectionView.delegate = self
-        viewModel.getCharacters()
     }
 }
 
