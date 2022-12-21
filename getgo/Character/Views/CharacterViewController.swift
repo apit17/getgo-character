@@ -53,6 +53,15 @@ extension CharacterViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return viewModel.sizeItem(collectionView: self.collectionView, collectionViewLayout: collectionViewLayout)
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let id = viewModel.itemFor(row: indexPath.item).id
+        viewModel.didSelectItem(id: id)
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        viewModel.collectionViewDidScroll(scrollView: scrollView)
+    }
 }
 
 extension CharacterViewController: CharacterViewModelViewDelegate {

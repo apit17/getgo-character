@@ -19,6 +19,8 @@ protocol CharacterViewModelType {
 
     // Event
     func getCharacters()
+    func didSelectItem(id: Int)
+    func collectionViewDidScroll(scrollView: UIScrollView)
 }
 
 protocol CharacterViewModelViewDelegate: AnyObject {
@@ -30,9 +32,15 @@ class CharacterViewModel {
     weak var viewDelegate: CharacterViewModelViewDelegate?
     var navigation: UINavigationController?
 
-    var filter = FilterCharacter(page: 1)
+    var filter = FilterCharacter(page: 1) {
+        didSet {
+            isPagination = filter.page <= lastPage
+        }
+    }
     private var characters: [Character] = []
     private var api: CharacterApiProtocol = CharacterApi(network: NetworkManager())
+    private var isPagination = true
+    private let lastPage = 10
 
     convenience init(api: CharacterApiProtocol) {
         self.init()
@@ -61,10 +69,36 @@ extension CharacterViewModel: CharacterViewModelType {
         return CGSize(width: width, height: width * (3 / 2))
     }
 
+    // Event
+
     func getCharacters() {
         api.fetchCharacters(filter: filter) { [weak self] data, error in
-            self?.characters = data?.results ?? []
-            self?.viewDelegate?.updateScreen()
+            guard let self = self else { return }
+            if let firstData = data?.results.first {
+                if !self.characters.contains(where: { $0.id == firstData.id }) {
+                    self.characters += data?.results ?? []
+                }
+            }
+            self.filter.page += 1
+            self.viewDelegate?.updateScreen()
+        }
+    }
+
+    func didSelectItem(id: Int) {
+        // go to detail
+    }
+
+    func collectionViewDidScroll(scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height {
+            if isPagination {
+                getCharacters()
+            } else {
+                if lastPage > 1 {
+                    if (scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height) {
+                        scrollView.setContentOffset(CGPointMake(scrollView.contentOffset.x, scrollView.contentSize.height - scrollView.frame.size.height), animated: false)
+                    }
+                }
+            }
         }
     }
 }

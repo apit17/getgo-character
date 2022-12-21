@@ -22,6 +22,7 @@ public class CharacterApi: CharacterApiProtocol {
 
     public func fetchCharacters(filter: FilterCharacter, completion: @escaping (CharacterData?, Error?) -> Void) {
         let url = CharacterRoutes.getCharacters(filter: filter).url
+        print(url.absoluteString)
         network.loadData(from: url) { result in
             switch result {
             case .success(let value):

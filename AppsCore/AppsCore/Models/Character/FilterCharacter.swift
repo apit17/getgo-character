@@ -8,7 +8,7 @@
 import Foundation
 
 public struct FilterCharacter {
-    public let page: Int
+    public var page: Int
     public var name: String?
     public var status: Status?
     public var species: Species?

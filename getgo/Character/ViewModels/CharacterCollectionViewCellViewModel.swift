@@ -19,6 +19,10 @@ class CharacterCollectionViewCellViewModel {
 
 extension CharacterCollectionViewCellViewModel {
 
+    var id: Int {
+        character.id
+    }
+
     var name: String {
         character.name
     }
