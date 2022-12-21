@@ -5,11 +5,12 @@ use_frameworks!
 workspace 'getgo.xcworkspace'
 
 def apps_core_pod
-  pod 'SwiftyJSON'
+  # Pods for AppsCore
 end
 
 target 'getgo' do
   apps_core_pod
+  pod 'SDWebImage'
 end
 
 target 'AppsCore' do

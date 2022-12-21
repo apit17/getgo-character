@@ -1,16 +1,18 @@
 PODS:
-  - SwiftyJSON (5.0.1)
+  - SDWebImage (5.13.4):
+    - SDWebImage/Core (= 5.13.4)
+  - SDWebImage/Core (5.13.4)
 
 DEPENDENCIES:
-  - SwiftyJSON
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
-    - SwiftyJSON
+    - SDWebImage
 
 SPEC CHECKSUMS:
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  SDWebImage: e5cc87bf736e60f49592f307bdf9e157189298a3
 
-PODFILE CHECKSUM: 15c6656f32e5c5375d5f30180915def97d2ca24c
+PODFILE CHECKSUM: fbb0572fc73bcba56b2496ce675d22c3a4124011
 
 COCOAPODS: 1.11.2

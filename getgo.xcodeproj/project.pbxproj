@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0268D67639E1F91BDC2A4008 /* Pods_getgoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3C662B85634B66B4A04360 /* Pods_getgoUITests.framework */; };
+		716E5C4B295296C400DC283C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C4A295296C400DC283C /* LocationViewController.swift */; };
+		716E5C4D295296D400DC283C /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C4C295296D400DC283C /* EpisodeViewController.swift */; };
+		716E5C5029529BC500DC283C /* CharacterCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C4F29529BC500DC283C /* CharacterCollectionViewCellViewModel.swift */; };
+		716E5C522952A25900DC283C /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716E5C512952A25900DC283C /* CharacterViewController.xib */; };
+		716E5C552952A33500DC283C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C542952A33500DC283C /* MainTabBarViewController.swift */; };
+		716E5C5C2952AA4B00DC283C /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C5A2952AA4B00DC283C /* CharacterCollectionViewCell.swift */; };
+		716E5C5D2952AA4B00DC283C /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716E5C5B2952AA4B00DC283C /* CharacterCollectionViewCell.xib */; };
+		716E5C5F2952AAD400DC283C /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C5E2952AAD400DC283C /* CharacterViewModel.swift */; };
+		716E5C612952B56900DC283C /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C602952B56900DC283C /* UIImageView+Extensions.swift */; };
 		717A7DB1294DC32B003E42B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7DB0294DC32B003E42B7 /* AppDelegate.swift */; };
 		717A7DB3294DC32B003E42B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7DB2294DC32B003E42B7 /* SceneDelegate.swift */; };
 		717A7DB5294DC32B003E42B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7DB4294DC32B003E42B7 /* ViewController.swift */; };
@@ -60,6 +69,15 @@
 		0F9C62DAB67DE5A7B82C87D8 /* Pods-getgoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-getgoUITests.release.xcconfig"; path = "Target Support Files/Pods-getgoUITests/Pods-getgoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1506C5DCF60EE88FD0ADA71F /* Pods-getgo-getgoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-getgo-getgoUITests.debug.xcconfig"; path = "Target Support Files/Pods-getgo-getgoUITests/Pods-getgo-getgoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		25E2F2B2E773702B938ACD78 /* Pods_getgoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_getgoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		716E5C4A295296C400DC283C /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		716E5C4C295296D400DC283C /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		716E5C4F29529BC500DC283C /* CharacterCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		716E5C512952A25900DC283C /* CharacterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterViewController.xib; sourceTree = "<group>"; };
+		716E5C542952A33500DC283C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		716E5C5A2952AA4B00DC283C /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		716E5C5B2952AA4B00DC283C /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
+		716E5C5E2952AAD400DC283C /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		716E5C602952B56900DC283C /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		717A7DAD294DC32B003E42B7 /* getgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		717A7DB0294DC32B003E42B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		717A7DB2294DC32B003E42B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +144,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		716E5C4E29529B9600DC283C /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				71F37E132950C13200988E03 /* CharacterViewController.swift */,
+				716E5C4F29529BC500DC283C /* CharacterCollectionViewCellViewModel.swift */,
+				716E5C512952A25900DC283C /* CharacterViewController.xib */,
+				716E5C5A2952AA4B00DC283C /* CharacterCollectionViewCell.swift */,
+				716E5C5B2952AA4B00DC283C /* CharacterCollectionViewCell.xib */,
+				716E5C5E2952AAD400DC283C /* CharacterViewModel.swift */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		716E5C532952A2E600DC283C /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				716E5C542952A33500DC283C /* MainTabBarViewController.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
 		717A7DA4294DC32B003E42B7 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +190,7 @@
 		717A7DAF294DC32B003E42B7 /* getgo */ = {
 			isa = PBXGroup;
 			children = (
+				716E5C532952A2E600DC283C /* MainTab */,
 				717A7DB0294DC32B003E42B7 /* AppDelegate.swift */,
 				717A7DB2294DC32B003E42B7 /* SceneDelegate.swift */,
 				717A7DB4294DC32B003E42B7 /* ViewController.swift */,
@@ -158,7 +198,10 @@
 				717A7DB9294DC32C003E42B7 /* Assets.xcassets */,
 				717A7DBB294DC32C003E42B7 /* LaunchScreen.storyboard */,
 				717A7DBE294DC32C003E42B7 /* Info.plist */,
-				71F37E132950C13200988E03 /* CharacterViewController.swift */,
+				716E5C4E29529B9600DC283C /* Character */,
+				716E5C4A295296C400DC283C /* LocationViewController.swift */,
+				716E5C4C295296D400DC283C /* EpisodeViewController.swift */,
+				716E5C602952B56900DC283C /* UIImageView+Extensions.swift */,
 			);
 			path = getgo;
 			sourceTree = "<group>";
@@ -305,8 +348,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716E5C522952A25900DC283C /* CharacterViewController.xib in Resources */,
 				717A7DBD294DC32C003E42B7 /* LaunchScreen.storyboard in Resources */,
 				717A7DBA294DC32C003E42B7 /* Assets.xcassets in Resources */,
+				716E5C5D2952AA4B00DC283C /* CharacterCollectionViewCell.xib in Resources */,
 				717A7DB8294DC32B003E42B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,9 +463,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716E5C5029529BC500DC283C /* CharacterCollectionViewCellViewModel.swift in Sources */,
+				716E5C552952A33500DC283C /* MainTabBarViewController.swift in Sources */,
+				716E5C612952B56900DC283C /* UIImageView+Extensions.swift in Sources */,
+				716E5C4B295296C400DC283C /* LocationViewController.swift in Sources */,
+				716E5C5C2952AA4B00DC283C /* CharacterCollectionViewCell.swift in Sources */,
 				71F37E142950C13200988E03 /* CharacterViewController.swift in Sources */,
 				717A7DB5294DC32B003E42B7 /* ViewController.swift in Sources */,
+				716E5C5F2952AAD400DC283C /* CharacterViewModel.swift in Sources */,
 				717A7DB1294DC32B003E42B7 /* AppDelegate.swift in Sources */,
+				716E5C4D295296D400DC283C /* EpisodeViewController.swift in Sources */,
 				717A7DB3294DC32B003E42B7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
