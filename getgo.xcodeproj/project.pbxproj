@@ -17,6 +17,7 @@
 		716E5C5D2952AA4B00DC283C /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716E5C5B2952AA4B00DC283C /* CharacterCollectionViewCell.xib */; };
 		716E5C5F2952AAD400DC283C /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C5E2952AAD400DC283C /* CharacterViewModel.swift */; };
 		716E5C612952B56900DC283C /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C602952B56900DC283C /* UIImageView+Extensions.swift */; };
+		716E5C652952D5B700DC283C /* CharacterViewModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E5C642952D5B700DC283C /* CharacterViewModel+Extensions.swift */; };
 		717A7DB1294DC32B003E42B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7DB0294DC32B003E42B7 /* AppDelegate.swift */; };
 		717A7DB3294DC32B003E42B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7DB2294DC32B003E42B7 /* SceneDelegate.swift */; };
 		717A7DB5294DC32B003E42B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A7DB4294DC32B003E42B7 /* ViewController.swift */; };
@@ -78,6 +79,7 @@
 		716E5C5B2952AA4B00DC283C /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		716E5C5E2952AAD400DC283C /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		716E5C602952B56900DC283C /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		716E5C642952D5B700DC283C /* CharacterViewModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterViewModel+Extensions.swift"; sourceTree = "<group>"; };
 		717A7DAD294DC32B003E42B7 /* getgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		717A7DB0294DC32B003E42B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		717A7DB2294DC32B003E42B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				716E5C4F29529BC500DC283C /* CharacterCollectionViewCellViewModel.swift */,
 				716E5C5E2952AAD400DC283C /* CharacterViewModel.swift */,
+				716E5C642952D5B700DC283C /* CharacterViewModel+Extensions.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				716E5C5F2952AAD400DC283C /* CharacterViewModel.swift in Sources */,
 				717A7DB1294DC32B003E42B7 /* AppDelegate.swift in Sources */,
 				716E5C4D295296D400DC283C /* EpisodeViewController.swift in Sources */,
+				716E5C652952D5B700DC283C /* CharacterViewModel+Extensions.swift in Sources */,
 				717A7DB3294DC32B003E42B7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

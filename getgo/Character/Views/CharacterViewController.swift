@@ -27,6 +27,7 @@ class CharacterViewController: UIViewController {
 
     private func setupNavigation() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.setRightBarButton(viewModel.barItem(), animated: false)
         navigationItem.searchController = UISearchController(searchResultsController: nil)
         title = viewModel.title
     }
