@@ -39,14 +39,24 @@ extension CharacterViewModel: CharacterViewModelType {
     func getCharacters() {
         api.fetchCharacters(filter: filter) { [weak self] data, error in
             guard let self = self else { return }
-            if let firstData = data?.results.first {
+            let results = data?.results ?? []
+            if let firstData = results.first {
                 if !self.characters.contains(where: { $0.id == firstData.id }) {
-                    self.characters += data?.results ?? []
+                    self.characters += results
+                } else {
+                    self.characters = results
                 }
             }
             self.filter.page += 1
             self.viewDelegate?.updateScreen()
         }
+    }
+
+    func searchCharacters(text: String?) {
+        filter.name = text
+        filter.page = 1
+        characters.removeAll()
+        getCharacters()
     }
 
     func didSelectItem(id: Int) {

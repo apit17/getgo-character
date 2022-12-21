@@ -28,7 +28,9 @@ class CharacterViewController: UIViewController {
     private func setupNavigation() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.setRightBarButton(viewModel.barItem(), animated: false)
-        navigationItem.searchController = UISearchController(searchResultsController: nil)
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
         title = viewModel.title
     }
 
@@ -36,6 +38,12 @@ class CharacterViewController: UIViewController {
         collectionView.register(UINib(nibName: String(describing: CharacterCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: CharacterCollectionViewCell.self))
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+}
+
+extension CharacterViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        viewModel.searchCharacters(text: searchController.searchBar.text)
     }
 }
 

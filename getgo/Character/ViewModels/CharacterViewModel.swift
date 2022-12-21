@@ -20,6 +20,7 @@ protocol CharacterViewModelType {
 
     // Event
     func getCharacters()
+    func searchCharacters(text: String?)
     func didSelectItem(id: Int)
     func collectionViewDidScroll(scrollView: UIScrollView)
 }
