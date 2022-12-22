@@ -214,15 +214,8 @@
 		716E5C6629530D1E00DC283C /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				716E5C6729530D3900DC283C /* FilterViewController.swift */,
-				716E5C6829530D3900DC283C /* FilterViewController.xib */,
-				71FD85732954071C00667DEF /* FilterTableViewCell.swift */,
-				71FD85742954071C00667DEF /* FilterTableViewCell.xib */,
-				71FD8579295408B400667DEF /* FilterCollectionViewCell.swift */,
-				71FD857A295408B400667DEF /* FilterCollectionViewCell.xib */,
-				71FD858029544A0000667DEF /* FilterViewModel.swift */,
-				71FD858229544AD100667DEF /* FilterTableViewCellViewModel.swift */,
-				71FD858429547D5000667DEF /* FilterCollectionViewCellViewModel.swift */,
+				71FD858E29548F9E00667DEF /* Views */,
+				71FD858F29548FAF00667DEF /* ViewModels */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -266,7 +259,6 @@
 				716E5C4E29529B9600DC283C /* Character */,
 				716E5C4A295296C400DC283C /* LocationViewController.swift */,
 				716E5C4C295296D400DC283C /* EpisodeViewController.swift */,
-				716E5C602952B56900DC283C /* UIImageView+Extensions.swift */,
 			);
 			path = getgo;
 			sourceTree = "<group>";
@@ -293,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				71FD857E295442AE00667DEF /* FlowLayout.swift */,
+				716E5C602952B56900DC283C /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -312,6 +305,29 @@
 				71FD858C29547E1900667DEF /* FilterData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		71FD858E29548F9E00667DEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				716E5C6729530D3900DC283C /* FilterViewController.swift */,
+				716E5C6829530D3900DC283C /* FilterViewController.xib */,
+				71FD85732954071C00667DEF /* FilterTableViewCell.swift */,
+				71FD85742954071C00667DEF /* FilterTableViewCell.xib */,
+				71FD8579295408B400667DEF /* FilterCollectionViewCell.swift */,
+				71FD857A295408B400667DEF /* FilterCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		71FD858F29548FAF00667DEF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				71FD858029544A0000667DEF /* FilterViewModel.swift */,
+				71FD858229544AD100667DEF /* FilterTableViewCellViewModel.swift */,
+				71FD858429547D5000667DEF /* FilterCollectionViewCellViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A84CAF29FC794687E919FBFF /* Pods */ = {
