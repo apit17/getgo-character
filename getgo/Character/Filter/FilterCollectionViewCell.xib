@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FilterCollectionViewCell" customModule="getgo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="129" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="129" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPi-8C-icq">
+                        <rect key="frame" x="0.0" y="0.0" width="129" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmf-9v-4c6">
+                                <rect key="frame" x="8" y="6" width="113" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qmf-9v-4c6" firstAttribute="leading" secondItem="kPi-8C-icq" secondAttribute="leading" constant="8" id="1VX-XG-ZZb"/>
+                            <constraint firstItem="Qmf-9v-4c6" firstAttribute="top" secondItem="kPi-8C-icq" secondAttribute="top" constant="6" id="4tb-6t-eiI"/>
+                            <constraint firstAttribute="bottom" secondItem="Qmf-9v-4c6" secondAttribute="bottom" constant="6" id="gaw-1X-u2e"/>
+                            <constraint firstAttribute="trailing" secondItem="Qmf-9v-4c6" secondAttribute="trailing" constant="8" id="zMu-UD-A3B"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="kPi-8C-icq" secondAttribute="bottom" id="0YM-wP-ri9"/>
+                <constraint firstItem="kPi-8C-icq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="20A-Yn-ufh"/>
+                <constraint firstItem="kPi-8C-icq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3oS-FF-3sH"/>
+                <constraint firstAttribute="trailing" secondItem="kPi-8C-icq" secondAttribute="trailing" id="GPI-O3-ic2"/>
+            </constraints>
+            <size key="customSize" width="129" height="50"/>
+            <connections>
+                <outlet property="filterView" destination="kPi-8C-icq" id="EqW-ZV-Ica"/>
+                <outlet property="nameLabel" destination="Qmf-9v-4c6" id="SIl-Ou-zhM"/>
+            </connections>
+            <point key="canvasLocation" x="154.96183206106869" y="-11.267605633802818"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

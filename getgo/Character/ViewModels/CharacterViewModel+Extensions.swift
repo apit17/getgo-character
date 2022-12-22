@@ -78,7 +78,13 @@ extension CharacterViewModel: CharacterViewModelType {
     }
 
     @objc private func filterButtonPressed() {
-
+        let filterController = FilterViewController()
+        filterController.viewModel = FilterViewModel()
+        let filterNavigation = UINavigationController(rootViewController: filterController)
+        filterNavigation.modalPresentationStyle = .overCurrentContext
+        filterNavigation.modalTransitionStyle = .crossDissolve
+        filterNavigation.hidesBottomBarWhenPushed = true
+        navigation?.tabBarController?.present(filterNavigation, animated: true)
     }
 
 }
