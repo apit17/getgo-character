@@ -27,9 +27,9 @@ public enum CharacterRoutes {
         switch self {
         case .getCharacters(let filter):
             let name = filter.name ?? ""
-            let status = filter.status?.rawValue ?? ""
-            let species = filter.species?.rawValue ?? ""
-            let gender = filter.gender?.rawValue ?? ""
+            let status = filter.status ?? ""
+            let species = filter.species ?? ""
+            let gender = filter.gender ?? ""
             urlComponents.queryItems = [
                 URLQueryItem(name: "page", value: String(filter.page)),
                 URLQueryItem(name: "name", value: name),

@@ -12,10 +12,11 @@ class FilterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
 
-    func configureView(name: String) {
-        nameLabel.text = name
-        filterView.layer.borderColor = UIColor.lightGray.cgColor
-        filterView.layer.borderWidth = 1
-        filterView.layer.cornerRadius = 10
+    func configureView(viewModel: FilterCollectionViewCellViewModel) {
+        nameLabel.text = viewModel.name
+        nameLabel.textColor = viewModel.borderColor
+        filterView.layer.borderColor = viewModel.borderColor.cgColor
+        filterView.layer.borderWidth = viewModel.borderWidth
+        filterView.layer.cornerRadius = viewModel.viewCorner
     }
 }

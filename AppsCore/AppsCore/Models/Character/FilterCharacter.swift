@@ -10,11 +10,11 @@ import Foundation
 public struct FilterCharacter {
     public var page: Int
     public var name: String?
-    public var status: Status?
-    public var species: Species?
-    public var gender: Gender?
+    public var status: String?
+    public var species: String?
+    public var gender: String?
 
-    public init(page: Int, name: String? = nil, status: Status? = nil, species: Species? = nil, gender: Gender? = nil) {
+    public init(page: Int, name: String? = nil, status: String? = nil, species: String? = nil, gender: String? = nil) {
         self.page = page
         self.name = name
         self.status = status

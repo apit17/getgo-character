@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FilterViewDelegate: AnyObject {
+    func appliedFilter(filters: [FilterModel])
+}
+
 class FilterViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
@@ -15,6 +19,7 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var panButton: UIButton!
     @IBOutlet weak var backgroundView: UIView!
 
+    weak var delegate: FilterViewDelegate?
     var viewModel: FilterViewModelType!
 
     override func viewDidLoad() {
@@ -27,6 +32,7 @@ class FilterViewController: UIViewController {
     private func setupView() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(backgroundTapped))
         backgroundView.addGestureRecognizer(tap)
+        applyButton.addTarget(self, action: #selector(applyButtonPressed), for: .touchUpInside)
         panButton.layer.cornerRadius = viewModel.panCorner
         contentView.layer.cornerRadius = viewModel.contentCorner
         applyButton.layer.cornerRadius = viewModel.buttonCorner
@@ -43,6 +49,13 @@ class FilterViewController: UIViewController {
         dismiss(animated: true)
     }
 
+    @objc private func applyButtonPressed() {
+        dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            self.delegate?.appliedFilter(filters: self.viewModel.filters)
+        }
+    }
+
 }
 
 extension FilterViewController: UITableViewDataSource {
@@ -52,8 +65,15 @@ extension FilterViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FilterTableViewCell.self), for: indexPath) as! FilterTableViewCell
-        let viewModel = viewModel.itemFor(row: indexPath.row)
+        let viewModel = FilterTableViewCellViewModel(filter: viewModel.filters[indexPath.row])
         cell.configureView(viewModel: viewModel)
+        cell.delegate = self
         return cell
+    }
+}
+
+extension FilterViewController: FilterTableViewCellDelegate {
+    func updateFilter(type: FilterType, filters: [FilterData]) {
+        viewModel.update(type: type, filters: filters)
     }
 }

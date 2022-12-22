@@ -8,32 +8,33 @@
 import Foundation
 import AppsCore
 
+protocol FilterTableViewCellViewDelegate: AnyObject {
+    func updateScreen()
+}
+
 class FilterTableViewCellViewModel {
 
-    private let type: FilterType
+    weak var delegate: FilterTableViewCellViewDelegate?
+    var filters: [FilterData] = []
+    private let filter: FilterModel
 
-    init(type: FilterType) {
-        self.type = type
+    init(filter: FilterModel) {
+        self.filter = filter
+        filters = filter.filters
     }
 }
 
 extension FilterTableViewCellViewModel {
     var title: String {
-        type.displayName
+        filter.type.displayName
     }
 
-    var names: [String] {
-        switch type {
-        case .status:
-            return status.map { $0.display }
-        case .species:
-            return species.map { $0.display }
-        case .gender:
-            return gender.map { $0.display }
-        }
+    var type: FilterType {
+        filter.type
     }
 
     func collectionViewHeight(collectionWidth: CGFloat) -> CGFloat {
+        let names = filters.map { $0.name }
         let widths = names.map { ($0 as NSString).size().width + 40 }
         let totalWidths = widths.reduce(0, +)
         if totalWidths > collectionWidth {
@@ -44,22 +45,16 @@ extension FilterTableViewCellViewModel {
     }
 
     func numberOfItems() -> Int {
-        names.count
+        filters.count
     }
 
-    func itemFor(row: Int) -> String {
-        names[row]
+    func itemFor(row: Int) -> FilterCollectionViewCellViewModel {
+        FilterCollectionViewCellViewModel(filter: filters[row])
     }
 
-    private var status: [Status] {
-        [.alive, .dead, .unknown]
-    }
-
-    private var species: [Species] {
-        [.alien, .animal, .myth, .human]
-    }
-
-    private var gender: [Gender] {
-        [.male, .female, .genderless, .unknown]
+    func didSelectItem(row: Int) {
+        filters.forEach { $0.selected = false }
+        filters[row].selected = filters[row].selected ? false : !filters[row].selected
+        delegate?.updateScreen()
     }
 }

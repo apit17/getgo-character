@@ -8,7 +8,7 @@
 import UIKit
 import AppsCore
 
-extension CharacterViewModel: CharacterViewModelType {
+extension CharacterViewModel: CharacterViewModelType, FilterViewDelegate {
 
     var title: String {
         "character".capitalized
@@ -54,9 +54,13 @@ extension CharacterViewModel: CharacterViewModelType {
 
     func searchCharacters(text: String?) {
         filter.name = text
+        resetCharacters()
+        getCharacters()
+    }
+
+    func resetCharacters() {
         filter.page = 1
         characters.removeAll()
-        getCharacters()
     }
 
     func didSelectItem(id: Int) {
@@ -79,12 +83,30 @@ extension CharacterViewModel: CharacterViewModelType {
 
     @objc private func filterButtonPressed() {
         let filterController = FilterViewController()
-        filterController.viewModel = FilterViewModel()
+        filterController.delegate = self
+        filterController.viewModel = FilterViewModel(filters: appliedFilter)
         let filterNavigation = UINavigationController(rootViewController: filterController)
         filterNavigation.modalPresentationStyle = .overCurrentContext
         filterNavigation.modalTransitionStyle = .crossDissolve
         filterNavigation.hidesBottomBarWhenPushed = true
         navigation?.tabBarController?.present(filterNavigation, animated: true)
+    }
+
+    func appliedFilter(filters: [FilterModel]) {
+        resetCharacters()
+        appliedFilter = filters
+        for filter in filters {
+            let selectedFilter = filter.filters.filter { $0.selected }
+            switch filter.type {
+            case .status:
+                self.filter.status = selectedFilter.first?.name
+            case .species:
+                self.filter.species = selectedFilter.first?.name
+            case .gender:
+                self.filter.gender = selectedFilter.first?.name
+            }
+        }
+        getCharacters()
     }
 
 }

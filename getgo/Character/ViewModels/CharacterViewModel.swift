@@ -12,6 +12,7 @@ protocol CharacterViewModelType {
 
     var viewDelegate: CharacterViewModelViewDelegate? { get set }
     var title: String { get }
+    var appliedFilter: [FilterModel] { get }
 
     func barItem() -> UIBarButtonItem
     func numberOfItems() -> Int
@@ -40,6 +41,7 @@ class CharacterViewModel {
         }
     }
     var characters: [Character] = []
+    var appliedFilter: [FilterModel] = FilterModel.types
     var api: CharacterApiProtocol = CharacterApi(network: NetworkManager())
     var isPagination = true
     let lastPage = 10

@@ -7,13 +7,22 @@
 
 import UIKit
 
+protocol FilterTableViewCellDelegate: AnyObject {
+    func updateFilter(type: FilterType, filters: [FilterData])
+}
+
 class FilterTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
-    
-    private var viewModel: FilterTableViewCellViewModel!
+
+    weak var delegate: FilterTableViewCellDelegate?
+    private var viewModel: FilterTableViewCellViewModel! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +49,18 @@ extension FilterTableViewCell: UICollectionViewDataSource, UICollectionViewDeleg
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FilterCollectionViewCell.self), for: indexPath) as! FilterCollectionViewCell
-        cell.configureView(name: viewModel.itemFor(row: indexPath.row))
+        cell.configureView(viewModel: viewModel.itemFor(row: indexPath.row))
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectItem(row: indexPath.row)
+    }
+}
+
+extension FilterTableViewCell: FilterTableViewCellViewDelegate {
+    func updateScreen() {
+        collectionView.reloadData()
+        delegate?.updateFilter(type: viewModel.type, filters: viewModel.filters)
     }
 }

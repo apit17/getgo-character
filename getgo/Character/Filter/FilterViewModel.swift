@@ -9,19 +9,18 @@ import Foundation
 import AppsCore
 
 protocol FilterViewModelType {
-    var filterTypes: [FilterType] { get }
+    var filters: [FilterModel] { get }
     var panCorner: CGFloat { get }
     var contentCorner: CGFloat { get }
     var buttonCorner: CGFloat { get }
 
     func numberOfItems() -> Int
     func itemFor(row: Int) -> FilterTableViewCellViewModel
+    func update(type: FilterType, filters: [FilterData])
 }
 
 class FilterViewModel: FilterViewModelType {
-    var filterTypes: [FilterType] {
-        [.status, .species, .gender]
-    }
+    var filters: [FilterModel] = []
 
     var panCorner: CGFloat {
         10
@@ -35,26 +34,24 @@ class FilterViewModel: FilterViewModelType {
         10
     }
 
+    convenience init(filters: [FilterModel]) {
+        self.init()
+        self.filters = filters
+    }
+
     func numberOfItems() -> Int {
-        return filterTypes.count
+        return filters.count
     }
 
     func itemFor(row: Int) -> FilterTableViewCellViewModel {
-        FilterTableViewCellViewModel(type: FilterType(rawValue: row) ?? .status)
+        FilterTableViewCellViewModel(filter: filters[row])
     }
-}
 
-enum FilterType: Int {
-    case status, species, gender
-
-    var displayName: String {
-        switch self {
-        case .status:
-            return "Status"
-        case .gender:
-            return "Gender"
-        case .species:
-            return "Species"
+    func update(type: FilterType, filters: [FilterData]) {
+        for (i, filter) in self.filters.enumerated() {
+            if type == filter.type {
+                self.filters[i].filters = filters
+            }
         }
     }
 }

@@ -40,6 +40,10 @@
 		71FD857F295442AE00667DEF /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD857E295442AE00667DEF /* FlowLayout.swift */; };
 		71FD858129544A0000667DEF /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD858029544A0000667DEF /* FilterViewModel.swift */; };
 		71FD858329544AD100667DEF /* FilterTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD858229544AD100667DEF /* FilterTableViewCellViewModel.swift */; };
+		71FD858529547D5000667DEF /* FilterCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD858429547D5000667DEF /* FilterCollectionViewCellViewModel.swift */; };
+		71FD858829547D9300667DEF /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD858729547D9300667DEF /* FilterType.swift */; };
+		71FD858B29547DEF00667DEF /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD858A29547DEF00667DEF /* FilterModel.swift */; };
+		71FD858D29547E1900667DEF /* FilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD858C29547E1900667DEF /* FilterData.swift */; };
 		C84DD322F560841BAF6B4B9C /* Pods_getgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08CE4158C58B7F3CA34A197 /* Pods_getgo.framework */; };
 		F7D375185F49CF45AA4C713B /* Pods_getgoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E2F2B2E773702B938ACD78 /* Pods_getgoTests.framework */; };
 /* End PBXBuildFile section */
@@ -114,6 +118,10 @@
 		71FD857E295442AE00667DEF /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		71FD858029544A0000667DEF /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		71FD858229544AD100667DEF /* FilterTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		71FD858429547D5000667DEF /* FilterCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		71FD858729547D9300667DEF /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
+		71FD858A29547DEF00667DEF /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
+		71FD858C29547E1900667DEF /* FilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterData.swift; sourceTree = "<group>"; };
 		8F3C662B85634B66B4A04360 /* Pods_getgoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_getgoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9113D282002EB6EFFC3E8250 /* Pods-getgo-getgoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-getgo-getgoUITests.release.xcconfig"; path = "Target Support Files/Pods-getgo-getgoUITests/Pods-getgo-getgoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9220A22DAFDF2C39E7D18098 /* Pods-getgoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-getgoUITests.debug.xcconfig"; path = "Target Support Files/Pods-getgoUITests/Pods-getgoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +222,7 @@
 				71FD857A295408B400667DEF /* FilterCollectionViewCell.xib */,
 				71FD858029544A0000667DEF /* FilterViewModel.swift */,
 				71FD858229544AD100667DEF /* FilterTableViewCellViewModel.swift */,
+				71FD858429547D5000667DEF /* FilterCollectionViewCellViewModel.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -243,6 +252,8 @@
 		717A7DAF294DC32B003E42B7 /* getgo */ = {
 			isa = PBXGroup;
 			children = (
+				71FD858929547DE400667DEF /* Models */,
+				71FD858629547D7F00667DEF /* Enums */,
 				71FD857D2954429C00667DEF /* Extensions */,
 				716E5C532952A2E600DC283C /* MainTab */,
 				717A7DB0294DC32B003E42B7 /* AppDelegate.swift */,
@@ -284,6 +295,23 @@
 				71FD857E295442AE00667DEF /* FlowLayout.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		71FD858629547D7F00667DEF /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				71FD858729547D9300667DEF /* FilterType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		71FD858929547DE400667DEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71FD858A29547DEF00667DEF /* FilterModel.swift */,
+				71FD858C29547E1900667DEF /* FilterData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A84CAF29FC794687E919FBFF /* Pods */ = {
@@ -531,8 +559,10 @@
 				71FD858129544A0000667DEF /* FilterViewModel.swift in Sources */,
 				716E5C5029529BC500DC283C /* CharacterCollectionViewCellViewModel.swift in Sources */,
 				71FD857F295442AE00667DEF /* FlowLayout.swift in Sources */,
+				71FD858529547D5000667DEF /* FilterCollectionViewCellViewModel.swift in Sources */,
 				716E5C552952A33500DC283C /* MainTabBarViewController.swift in Sources */,
 				71FD858329544AD100667DEF /* FilterTableViewCellViewModel.swift in Sources */,
+				71FD858B29547DEF00667DEF /* FilterModel.swift in Sources */,
 				716E5C612952B56900DC283C /* UIImageView+Extensions.swift in Sources */,
 				716E5C4B295296C400DC283C /* LocationViewController.swift in Sources */,
 				716E5C5C2952AA4B00DC283C /* CharacterCollectionViewCell.swift in Sources */,
@@ -541,7 +571,9 @@
 				717A7DB5294DC32B003E42B7 /* ViewController.swift in Sources */,
 				716E5C6929530D3900DC283C /* FilterViewController.swift in Sources */,
 				716E5C5F2952AAD400DC283C /* CharacterViewModel.swift in Sources */,
+				71FD858D29547E1900667DEF /* FilterData.swift in Sources */,
 				71FD857B295408B400667DEF /* FilterCollectionViewCell.swift in Sources */,
+				71FD858829547D9300667DEF /* FilterType.swift in Sources */,
 				717A7DB1294DC32B003E42B7 /* AppDelegate.swift in Sources */,
 				716E5C4D295296D400DC283C /* EpisodeViewController.swift in Sources */,
 				716E5C652952D5B700DC283C /* CharacterViewModel+Extensions.swift in Sources */,
