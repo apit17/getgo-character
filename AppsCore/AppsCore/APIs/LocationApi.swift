@@ -20,6 +20,11 @@ public class LocationApi: LocationApiProtocol {
         self.network = network
     }
 
+    /// API Method for fetching list of locations
+    /// - Parameters:
+    ///   - page: Number of page for requesting specific page of locations
+    ///   - name: Name of location that use for searching the location
+    ///   - completion: Return closures of locations model and error when the request completed
     public func fetchLocations(page: Int, name: String?, completion: @escaping (LocationData?, Error?) -> Void) {
         let url = LocationRoutes.getLocations(page: page, name: name).url
         network.loadData(from: url) { result in
@@ -39,6 +44,11 @@ public class LocationApi: LocationApiProtocol {
         }
     }
 
+
+    /// API Method for fethcing detail location
+    /// - Parameters:
+    ///   - id: ID of location that use for get the detail
+    ///   - completion: Return closures of location model and error when the request completed
     public func fetchLocation(id: Int, completion: @escaping (Location?, Error?) -> Void) {
         let url = LocationRoutes.getLocation(id: id).url
         network.loadData(from: url) { result in
