@@ -21,7 +21,25 @@ class MainTabBarViewController: UITabBarController {
         characterViewModel.navigation = characterNavigation
         characterController.viewModel = characterViewModel
 
-        setViewControllers([characterNavigation], animated: false)
+        let locationController = LocationViewController()
+        let locationTabItem = UITabBarItem(title: "Location", image: UIImage(named: "Place Marker"), selectedImage: UIImage(named: "Place Marker-1"))
+        locationController.tabBarItem = locationTabItem
+
+        let locationNavigation = UINavigationController(rootViewController: locationController)
+        let locationViewModel = LocationViewModel()
+        locationViewModel.navigation = locationNavigation
+        locationController.viewModel = locationViewModel
+
+        let episodeController = EpisodeViewController()
+        let episodeTabItem = UITabBarItem(title: "Episodes", image: UIImage(named: "TV Show"), selectedImage: UIImage(named: "TV Show-1"))
+        episodeController.tabBarItem = episodeTabItem
+
+        let episodeNavigation = UINavigationController(rootViewController: episodeController)
+        let episodeViewModel = EpisodeViewModel()
+        episodeViewModel.navigation = episodeNavigation
+        episodeController.viewModel = episodeViewModel
+
+        setViewControllers([characterNavigation, locationNavigation, episodeNavigation], animated: false)
     }
 
 }
