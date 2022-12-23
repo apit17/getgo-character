@@ -31,7 +31,7 @@ class MainTabBarViewController: UITabBarController {
         locationController.viewModel = locationViewModel
 
         let episodeController = EpisodeViewController()
-        let episodeTabItem = UITabBarItem(title: "Episodes", image: UIImage(named: "TV Show"), selectedImage: UIImage(named: "TV Show-1"))
+        let episodeTabItem = UITabBarItem(title: "Episode", image: UIImage(named: "TV Show"), selectedImage: UIImage(named: "TV Show-1"))
         episodeController.tabBarItem = episodeTabItem
 
         let episodeNavigation = UINavigationController(rootViewController: episodeController)

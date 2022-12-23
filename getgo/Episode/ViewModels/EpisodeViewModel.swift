@@ -47,7 +47,7 @@ class EpisodeViewModel {
 
 extension EpisodeViewModel: EpisodeViewModelType {
     var title: String {
-        "character".capitalized
+        "episode".capitalized
     }
 
     func numberOfItems() -> Int {
