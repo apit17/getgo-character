@@ -26,7 +26,7 @@ class LocationEpisodeTableViewCell: UITableViewCell {
     func configureLocation(viewModel: LocationTableViewCellViewModel) {
         episodeView.isHidden = true
         locationView.layer.cornerRadius = 10
-        locationView.layer.borderColor = UIColor.black.cgColor
+        locationView.layer.borderColor = UIColor.label.cgColor
         locationView.layer.borderWidth = 1
         locationNameLabel.text = viewModel.name
         locationTypeLabel.text = viewModel.type
@@ -36,7 +36,7 @@ class LocationEpisodeTableViewCell: UITableViewCell {
     func configureEpisode(viewModel: EpisodeTableViewCellViewModel) {
         locationView.isHidden = true
         episodeView.layer.cornerRadius = 10
-        episodeView.layer.borderColor = UIColor.black.cgColor
+        episodeView.layer.borderColor = UIColor.label.cgColor
         episodeView.layer.borderWidth = 1
         episodeNameLabel.text = viewModel.name
         episodeInfoLabel.text = viewModel.info

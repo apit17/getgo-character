@@ -350,11 +350,12 @@
 				717A7DB0294DC32B003E42B7 /* AppDelegate.swift */,
 				717A7DB2294DC32B003E42B7 /* SceneDelegate.swift */,
 				717A7DBB294DC32C003E42B7 /* LaunchScreen.storyboard */,
-				7113DD3C29555AD200EA9315 /* Detail */,
-				71FD859529549C2C00667DEF /* Commons */,
 				716E5C4E29529B9600DC283C /* Character */,
-				71FD8590295493E800667DEF /* Location */,
+				71FD859529549C2C00667DEF /* Commons */,
+				7113DD3C29555AD200EA9315 /* Detail */,
 				7113DD2F2955575E00EA9315 /* Episode */,
+				71FD8590295493E800667DEF /* Location */,
+				716E5C532952A2E600DC283C /* MainTab */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -444,7 +445,6 @@
 				7113DD5F2955AD8A00EA9315 /* SuportingFiles */,
 				71FD858629547D7F00667DEF /* Enums */,
 				71FD857D2954429C00667DEF /* Extensions */,
-				716E5C532952A2E600DC283C /* MainTab */,
 				71FD858929547DE400667DEF /* Models */,
 				7113DD5E2955A8E100EA9315 /* Scenes */,
 			);
